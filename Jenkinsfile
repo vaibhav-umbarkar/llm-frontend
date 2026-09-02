@@ -16,6 +16,10 @@ pipeline {
                 }
             }
 
+            environment {
+                NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
+            }
+
             steps {
                 sh 'rm -rf node_module'
                 sh 'npm ci'
