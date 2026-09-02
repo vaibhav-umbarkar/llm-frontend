@@ -1,3 +1,4 @@
+import type { Model } from '@/types';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
@@ -14,7 +15,10 @@ describe('MessageInput', () => {
       {
         id: 'test-model-1',
         name: 'Test Model',
-      },
+        description: 'Test model',
+        capabilities: [],
+        status: 'available',
+      } as Model,
     ],
     modelsLoading: false,
   });
@@ -216,11 +220,17 @@ describe('MessageInput', () => {
           {
             id: 'test-model-1',
             name: 'Test Model',
-          },
+            description: 'Test model',
+            capabilities: [],
+            status: 'available',
+          } as Model,
           {
             id: 'test-model-2',
             name: 'Another Test Model',
-          },
+            description: 'Another test model',
+            capabilities: [],
+            status: 'available',
+          } as Model,
         ]}
       />
     );
@@ -249,11 +259,17 @@ describe('MessageInput', () => {
           {
             id: 'test-model-1',
             name: 'Test Model',
-          },
+            description: 'Test model',
+            capabilities: [],
+            status: 'available',
+          } as Model,
           {
             id: 'test-model-2',
             name: 'Another Test Model',
-          },
+            description: 'Another test model',
+            capabilities: [],
+            status: 'available',
+          } as Model,
         ]}
       />
     );
