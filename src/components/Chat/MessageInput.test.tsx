@@ -17,7 +17,7 @@ describe('MessageInput', () => {
         name: 'Test Model',
         description: 'Test model',
         capabilities: [],
-        status: 'available',
+        status: 'active',
       } as Model,
     ],
     modelsLoading: false,
@@ -222,14 +222,14 @@ describe('MessageInput', () => {
             name: 'Test Model',
             description: 'Test model',
             capabilities: [],
-            status: 'available',
+            status: 'active',
           } as Model,
           {
             id: 'test-model-2',
             name: 'Another Test Model',
             description: 'Another test model',
             capabilities: [],
-            status: 'available',
+            status: 'active',
           } as Model,
         ]}
       />
@@ -261,14 +261,14 @@ describe('MessageInput', () => {
             name: 'Test Model',
             description: 'Test model',
             capabilities: [],
-            status: 'available',
+            status: 'active',
           } as Model,
           {
             id: 'test-model-2',
             name: 'Another Test Model',
             description: 'Another test model',
             capabilities: [],
-            status: 'available',
+            status: 'active',
           } as Model,
         ]}
       />
