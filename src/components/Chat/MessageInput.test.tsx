@@ -180,6 +180,8 @@ describe('MessageInput', () => {
     expect(sendButton).toBeDisabled();
   });
 
+
+
   it('opens the creativity menu', async () => {
     const user = userEvent.setup();
     const props = createProps();
@@ -194,10 +196,12 @@ describe('MessageInput', () => {
 
     await user.click(creativityButton);
 
-    expect(screen.getByText('Low')).toBeInTheDocument();
-    expect(screen.getByText('Medium')).toBeInTheDocument();
-    expect(screen.getByText('High')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Low' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Medium' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'High' })).toBeInTheDocument();
   });
+
+
 
   it('changes the creativity level', async () => {
     const user = userEvent.setup();
