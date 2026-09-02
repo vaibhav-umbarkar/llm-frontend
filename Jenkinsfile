@@ -21,7 +21,7 @@ pipeline {
             }
 
             steps {
-                sh 'rm -rf node_module'
+                sh 'rm -rf node_modules'
                 sh 'npm ci'
                 sh 'npm run test -- --run'
             }
